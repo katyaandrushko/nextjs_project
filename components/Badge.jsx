@@ -1,7 +1,14 @@
-import React from 'react'
+'use client'
+import { CountUp } from 'react-countup'
 
-const Badge = () => {
-   return <div>Badge</div>
+const Badge = ({
+   containerStyles,
+   icon,
+   endCountNum,
+   endCounttext,
+   badgetext,
+}) => {
+   return <div className={`badge ${containerStyles}`}>Badge</div>
 }
 
 export default Badge
