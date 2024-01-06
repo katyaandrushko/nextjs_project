@@ -162,10 +162,63 @@ const About = () => {
                      {/* Tabs content */}
                      <div className="text-lg mt-12 xl:mt-8">
                         <TabsContent value="personal">
-                           Personal Info
+                           <div className="text-center xl:text-left">
+                              <h3 className="h3 mb-4">PERSONAL INFORMATION</h3>
+                              <p className="subtitle max-w-xl max-auto xl:mx-0">
+                                 Lorem ipsum dolor sit amet consectetur
+                                 adipisicing elit. Unde et nisi illo architecto
+                                 adipisci delectus deleniti minima nostrum?
+                                 Alias dolores delectus libero porro amet
+                                 asperiores deserunt corporis nesciunt cumque
+                                 voluptas.
+                              </p>
+
+                              {/* ICONS */}
+                              <div className="grid xl:grid-cols-2 gap-4 mb-12">
+                                 {infoData.map((item, index) => {
+                                    return (
+                                       <div
+                                          className="flex items-center gap-x-4 mx-auto xl:mx-0"
+                                          key={index}
+                                       >
+                                          <div className="text-primary">
+                                             {item.icon}
+                                          </div>
+                                          <div>{item.text}</div>
+                                       </div>
+                                    )
+                                 })}
+                              </div>
+                              {/* Languages */}
+
+                              <div className="flex flex-col gap-y-2">
+                                 <div>Language Skills</div>
+                                 <div className="border-b border-border "></div>
+                                 <div className="">
+                                    English, Spanish, Ukrainian
+                                 </div>
+                              </div>
+                           </div>
                         </TabsContent>
+
+                        {/* Qualifications content */}
                         <TabsContent value="qualifications">
-                           Qualifications
+                           <div>
+                              <h3 className="h3 mb-8 text-center xl:text-left">
+                                 My Journey
+                              </h3>
+                              <div>
+                                 {/* experience  */}
+                                 <div>
+                                    <div>
+                                       <Briefcase />
+                                    </div>
+                                 </div>
+
+                                 {/* education  */}
+                                 <div>education</div>
+                              </div>
+                           </div>
                         </TabsContent>
                         <TabsContent value="skills">Skills</TabsContent>
                      </div>
