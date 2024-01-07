@@ -43,39 +43,39 @@ const qualificationData = [
       title: 'education',
       data: [
          {
-            University: 'AK University',
-            Qualification: 'Master',
-            Years: '2019-2021',
+            university: 'AK University',
+            qualification: 'Master',
+            years: '2019-2021',
          },
          {
-            University: 'Brook University',
-            Qualification: 'Master',
-            Years: '2020-2022',
+            university: 'Brook University',
+            qualification: 'Master',
+            years: '2020-2022',
          },
          {
-            University: 'AK University',
-            Qualification: 'Master',
-            Years: '2021-2023',
+            university: 'AK University',
+            qualification: 'Master',
+            years: '2021-2023',
          },
       ],
    },
    {
-      title: 'experiance',
+      title: 'experience',
       data: [
          {
-            University: 'PPC',
-            Qualification: 'Frontend',
-            Years: '2019-2021',
+            company: 'PPC',
+            role: 'Frontend',
+            years: '2019-2021',
          },
          {
-            University: 'Pksf',
-            Qualification: 'Tech Lead',
-            Years: '2020-2022',
+            company: 'Pksf',
+            role: 'Tech Lead',
+            years: '2020-2022',
          },
          {
-            University: 'GOOGLE',
-            Qualification: 'Senior',
-            Years: '2021-2023',
+            company: 'GOOGLE',
+            role: 'Senior',
+            years: '2021-2023',
          },
       ],
    },
@@ -207,16 +207,100 @@ const About = () => {
                               <h3 className="h3 mb-8 text-center xl:text-left">
                                  My Journey
                               </h3>
-                              <div>
+                              <div className="grid md:grid-cols-2 gap-y-8 ">
                                  {/* experience  */}
-                                 <div>
-                                    <div>
+                                 <div className="flex flex-col gap-y-6">
+                                    <div className="flex gap-x-4 items-center text-[22px] text-primary">
                                        <Briefcase />
+                                       <h4 className="capitalize font-medium ">
+                                          {
+                                             getData(
+                                                qualificationData,
+                                                'experience'
+                                             ).title
+                                          }
+                                       </h4>
+                                    </div>
+                                    {/* Experience list */}
+                                    <div className="flex flex-col gap-y-8 ">
+                                       {getData(
+                                          qualificationData,
+                                          'experience'
+                                       ).data.map((item, index) => {
+                                          const { company, role, years } = item
+                                          return (
+                                             <div
+                                                className="flex gap-x-8 group"
+                                                key={index}
+                                             >
+                                                <div className="h-[84px] w-[1px] bg-border relative ml-2 ">
+                                                   <div className="w-[11px] h-[11px] rounded-full bg-primary absolute -left-[5px] group-hover:translate-y-[84px] transition-all duration-500"></div>
+                                                </div>
+                                                <div>
+                                                   <div className="font-semibold text-xl leading-none mb-2">
+                                                      {company}
+                                                   </div>
+                                                   <div className="text-lg leading-none text-muted-foreground mb-4">
+                                                      {role}
+                                                   </div>
+                                                   <div className="text-base font-medium">
+                                                      {years}
+                                                   </div>
+                                                </div>
+                                             </div>
+                                          )
+                                       })}
                                     </div>
                                  </div>
 
                                  {/* education  */}
-                                 <div>education</div>
+                                 <div className="flex flex-col gap-y-6">
+                                    <div className="flex gap-x-4 items-center text-[22px] text-primary">
+                                       <GraduationCapIcon size={28} />
+                                       <h4 className="capitalize font-medium ">
+                                          {
+                                             getData(
+                                                qualificationData,
+                                                'education'
+                                             ).title
+                                          }
+                                       </h4>
+                                    </div>
+                                    {/* Experience list */}
+                                    <div className="flex flex-col gap-y-8 ">
+                                       {getData(
+                                          qualificationData,
+                                          'education'
+                                       ).data.map((item, index) => {
+                                          const {
+                                             university,
+                                             qualification,
+                                             years,
+                                          } = item
+                                          return (
+                                             <div
+                                                className="flex gap-x-8 group"
+                                                key={index}
+                                             >
+                                                <div className="h-[84px] w-[1px] bg-border relative ml-2 ">
+                                                   <div className="w-[11px] h-[11px] rounded-full bg-primary absolute -left-[5px] group-hover:translate-y-[84px] transition-all duration-500"></div>
+                                                </div>
+                                                <div>
+                                                   <div className="font-semibold text-xl leading-none mb-2">
+                                                      {university}
+                                                   </div>
+                                                   <div className="text-lg leading-none text-muted-foreground mb-4">
+                                                      {qualification}
+                                                   </div>
+                                                   <div className="text-base font-medium">
+                                                      {years}
+                                                   </div>
+                                                </div>
+                                             </div>
+                                          )
+                                       })}
+                                    </div>
+                                 </div>
                               </div>
                            </div>
                         </TabsContent>
