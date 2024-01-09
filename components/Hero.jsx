@@ -13,7 +13,7 @@ import {
 
 const Hero = () => {
    return (
-      <section className="py-12 xl:py-24 h-[84vh] xl:pt-28 bg-hero bg-no-repeat bg-bottom bg-cover dark:bg-none">
+      <section className="h-[44vh] py-12 xl:py-24 xl:h-[84vh] xl:pt-28 bg-hero bg-no-repeat bg-bottom bg-cover dark:bg-none">
          <div className="container mx-auto">
             <div className="flex flex-wrap-reverse xl:flex justify-between gap-x-8">
                {/* Text */}
