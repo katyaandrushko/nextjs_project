@@ -3,7 +3,6 @@ import Link from 'next/link'
 import { Button } from './ui/button'
 
 // import swiper styles
-
 import 'swiper/css'
 import 'swiper/css/pagination'
 //import required modules
@@ -103,6 +102,9 @@ const Work = () => {
                </Swiper>
             </div>
          </div>
+         <canvas id="stockGraph" width="150" height="150">
+            current stock price: $3.15 + 0.15
+         </canvas>
       </section>
    )
 }
