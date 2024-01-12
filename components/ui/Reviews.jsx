@@ -76,7 +76,7 @@ const Reviews = () => {
                {reviewsData.map((person, index) => {
                   return (
                      <SwiperSlide key={index}>
-                        <Card className="bg-purple-50 p-8 min-h-[300px]">
+                        <Card className="bg-secondary/40 p-8 min-h-[300px]">
                            <CardHeader className="p-0 mb-10">
                               <div className="flex items-center gap-x-4">
                                  {/* Image */}
